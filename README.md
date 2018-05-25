@@ -1,14 +1,17 @@
-# Assessment: {Assessment Name Here}
+# Assessment: Todos, Part II
 
-For this assessment, you'll be creating {what they'll be creating here}:
+Previously, you wrote an application tha displayed a list of todos. For this assessment,
+you'll be extending that todo appliation such that users can actually interact with it.
 
+Here's the finally product again as a reminder of what the complete product
+will look like:
 ![example output](screenshots/result.gif)
 
 In doing so, you'll be demonstrating a basic understanding of the following:
 
-- some learning objectives
-- should go here
-- that motivate this assessment
+- modifying component-specific values using state
+- responding to user interactions by using event handlers and component methods
+
 
 ## Getting Started
 To get started, _fork_ this repository into your own GitHub account then clone
