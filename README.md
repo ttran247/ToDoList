@@ -14,28 +14,8 @@ In doing so, you'll be demonstrating a basic understanding of the following:
 
 
 ## Getting Started
-To get started, _fork_ this repository into your own GitHub account then clone
-this repository to your local machine:
+To get started, copy your code from part 1 into a new repository.
 
-```console
-foo@bar:~ $ git clone git@github.com:github-username/{repo name}
-foo@bar:~ $ cd {repo name}
-foo@bar:~/{repo name} $
-```
-
-Note `github-username` above. In other words, __don't__ simply copy-paste the
-code above blindly into a terminal. 
-
-Next, you'll need to install dependencies using `yarn`:
-
-```console
-foo@bar:~/{repo name} $ yarn
-```
-
-Before coding, you should ensure that this scaffold works by running the application:
-```console
-foo@bar:~/{repo name} $ yarn start
-```
 
 ## Acceptance Criteria
 
