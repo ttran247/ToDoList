@@ -21,20 +21,20 @@ To get started, copy your code from part 1 into a new repository.
 
 ## Acceptance Criteria
 
-### Step 1: { Task description } (x point(s))
-{ Describe the task to be completed }
+### User Can Add a Todo (3 points): 
+When a user types into the top input and hits the Enter/return key, it should it as a todo and empty the input.
 
+### User can mark a todo as complete (3 points): 
+When a user clicks on the circle at the beginning of a todo it will toggle whether that todo is completed or not.
 
-## Bonus (0 points)
+### User Can Delete a Todo (2 points): 
+When a user clicks the "X" on the right of a Todo, it removes it from the list.
 
-If you find yourself with extra time (e.g., don't have other assessments to
-catch up on), you may consider improving the quality in a number of ways:
-
-- { some extra work that can be done to challenge the student further }
+### User Can Delete all Todos Marked as Complete (3 points): 
+When a user clicks the button 'Clear Completed' it will delete all todos that are marked as complete.
 
 ## Submission
 
-This morning, you learned how to deploy a React app to GitHub Pages, so you
-__will__ be required to submit a deployed application today. If you instead
+You __will__ be required to submit a deployed application. If you instead
 submit a link to a GitHub repository (that is, only code), you _will_ be awarded
 __0__ points.
