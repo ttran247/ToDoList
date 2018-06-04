@@ -30,7 +30,7 @@ When a user clicks on the circle at the beginning of a todo it will toggle wheth
 ### User Can Delete a Todo (2 points): 
 When a user clicks the "X" on the right of a Todo, it removes it from the list.
 
-### User Can Delete all Todos Marked as Complete (3 points): 
+### User Can Delete all Todos Marked as Complete (2 points): 
 When a user clicks the button 'Clear Completed' it will delete all todos that are marked as complete.
 
 ## Submission
