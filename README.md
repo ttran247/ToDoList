@@ -22,7 +22,7 @@ To get started, copy your code from part 1 into a new repository.
 ## Acceptance Criteria
 
 ### User Can Add a Todo (3 points): 
-When a user types into the top input and hits the Enter/return key, it should it as a todo and empty the input.
+When a user types into the top input and hits the Enter/return key, it should add it as a todo and empty the input.
 
 ### User can mark a todo as complete (3 points): 
 When a user clicks on the circle at the beginning of a todo it will toggle whether that todo is completed or not.
