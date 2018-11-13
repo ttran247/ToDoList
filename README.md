@@ -1,6 +1,6 @@
 # Assessment: Todos, Part II
 
-Previously, you wrote an application tha displayed a list of todos. For this assessment,
+Previously, you wrote an application that displayed a list of todos. For this assessment,
 you'll be extending that todo application such that users can actually interact with it.
 
 *Once again, part 1 was purely visual and no functionality. Part 2 will be focused on adding functionality*
