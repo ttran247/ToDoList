@@ -12,20 +12,24 @@ In doing so, you'll be demonstrating a basic understanding of the following:
 
 ## Acceptance Criteria
 
-### User Can Add a Todo: 
+### User Can Add a Todo:
+
 When a user types into the top input and hits the Enter/return key, it should add it as a todo and empty the input.
 
-### User can mark a todo as complete: 
+### User can mark a todo as complete:
+
 When a user clicks on the circle at the beginning of a todo it will toggle whether that todo is completed or not.
 
-### User Can Delete a Todo: 
+### User Can Delete a Todo:
+
 When a user clicks the "X" on the right of a Todo, it removes it from the list.
 
-### User Can Delete all Todos Marked as Complete: 
+### User Can Delete all Todos Marked as Complete:
+
 When a user clicks the button 'Clear Completed' it will delete all todos that are marked as complete.
 
 ## Submission
 
-You __will__ be required to submit a deployed application. If you instead
+You **will** be required to submit a deployed application. If you instead
 submit a link to a repository (that is, only code), you _will_ be awarded
-__0__ points.
+**0** points.
