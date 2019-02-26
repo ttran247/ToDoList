@@ -102,7 +102,7 @@ class MyComponent extends Component {
 }
 ```
 
-Two things to notice: `handleDelete` method is actually a function inside of a function using two fat arrows. A single `handleDelete` method is used for every account, but the first function is called with the `account.id`. This creates a closure, aka a new memory context, in which `accountId` is saved with the return value which is the inner function.
+Two things to notice: `handleDelete` method is actually a function inside of a function using two fat arrows. Just the one `handleDelete` method is used for every account, but the first function is called with the `account.id`. This creates a closure, aka a new memory context, in which `accountId` is saved along with the return value which is the inner function. React will hand off this function to the DOM. The DOM then calls the function, passing in the `event` object, when the user clicks one of the buttons.
 
 Fork then clone this repository: https://gitlab.com/kenzie-academy/se/fe/react/assessment---todo-app-part-1
 
