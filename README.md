@@ -10,6 +10,8 @@ In doing so, you'll be demonstrating a basic understanding of the following:
 - modifying component-specific values using state
 - responding to user interactions by using event handlers and component methods
 
+Fork then clone this repository: https://gitlab.com/kenzie-academy/se/fe/react/assessment---todo-app-part-1
+
 ## Acceptance Criteria
 
 ### User Can Add a Todo:
