@@ -83,7 +83,7 @@ class MyComponent extends Component {
 
   handleDelete = accountId => event => {
     const newAccounts = this.state.accounts.filter(
-      account => account.id === accountId
+      account => account.id !== accountId
     );
     this.setState({ accounts: newAccounts });
   };
