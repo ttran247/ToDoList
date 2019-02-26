@@ -1,5 +1,7 @@
 # Assessment: Todos Part 1
 
+Fork then clone this repository: [https://gitlab.com/kenzie-academy/se/fe/react/assessment---todo-app-part-1](https://gitlab.com/kenzie-academy/se/fe/react/assessment---todo-app-part-1)
+
 For this assessment, you'll be extending a todo application such that users can actually interact with it.
 
 Here's what the final product should look like:  
@@ -105,8 +107,6 @@ class MyComponent extends Component {
 ```
 
 Two things to notice: `handleDelete` method is actually a function inside of a function (using two fat arrows). Just the one `handleDelete` method is used for every account, and the first function is called with the `account.id` (you can see the first call in the button onClick). This creates a closure, aka a new memory context, in which `accountId` is saved along with the return value, which is the inner function of `handleDelete`. React will hand off this function closure to the DOM. The DOM then calls the inner function, passing in the `event` object when the user clicks one of the buttons. When the inner function runs, its value for `accountId` will contain the correct id for the button that was clicked.
-
-Fork then clone this repository: https://gitlab.com/kenzie-academy/se/fe/react/assessment---todo-app-part-1
 
 ## Acceptance Criteria
 
