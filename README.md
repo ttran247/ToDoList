@@ -12,7 +12,7 @@ In doing so, you'll be demonstrating a basic understanding of the following:
 
 Event handlers can be written in a variety of ways.
 
-What is most important to understand about them is how to bind them properly to the component instance.
+What is most important to understand is how to bind them properly to the component instance.
 You may see a few different ways.
 
 ```jsx
@@ -67,7 +67,7 @@ class MyComponent extends Component {
 }
 ```
 
-The ES6 style is preferred. Proper binding, using one of the patterns above, is required when the handler must refer to any properties or methods on the component instance. It is very common that you will need `this.setState` method inside an event handler.
+The ES6 style is preferred. Proper binding, using one of the patterns above, is required when the handler must refer to any properties or methods on the component instance. Remember, properties/methods on the instance are accessed using `this` when writing instance methods. It is very common that you will need `this.setState` method inside an event handler method.
 
 The complexity of event handlers can increase when working with lists of components where each component needs its own "parameterized" version of the event handler.
 
@@ -93,7 +93,9 @@ class MyComponent extends Component {
         {this.state.accounts.map(account => (
           <div>
             <p>Account: {account.id}</p>
-            <button onClick={this.handleDelete(account.id)}>Delete Me</button>
+            <button onClick={this.handleDelete(account.id)}>
+              Delete Account
+            </button>
           </div>
         ))}
       </React.Fragment>
@@ -102,7 +104,7 @@ class MyComponent extends Component {
 }
 ```
 
-Two things to notice: `handleDelete` method is actually a function inside of a function using two fat arrows. Just the one `handleDelete` method is used for every account, but the first function is called with the `account.id`. This creates a closure, aka a new memory context, in which `accountId` is saved along with the return value which is the inner function. React will hand off this function to the DOM. The DOM then calls the function, passing in the `event` object, when the user clicks one of the buttons.
+Two things to notice: `handleDelete` method is actually a function inside of a function (using two fat arrows). Just the one `handleDelete` method is used for every account, and the first function is called with the `account.id` (you can see the first call in the button onClick). This creates a closure, aka a new memory context, in which `accountId` is saved along with the return value, which is the inner function of `handleDelete`. React will hand off this function closure to the DOM. The DOM then calls the inner function, passing in the `event` object when the user clicks one of the buttons. When the inner function runs, its value for `accountId` will contain the correct id for the button that was clicked.
 
 Fork then clone this repository: https://gitlab.com/kenzie-academy/se/fe/react/assessment---todo-app-part-1
 
