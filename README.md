@@ -5,7 +5,8 @@ Fork then clone this repository: [https://gitlab.com/kenzie-academy/se/fe/react/
 For this assessment, you'll be extending a todo application such that users can actually interact with it.
 
 Here's what the final product should look like:  
-![example output](screenshots/result.gif)
+
+<img src="https://s3.us-east-2.amazonaws.com/files.kenzie.academy/frontend-q2/todo-part-1.gif" alt="example output" height="400px" />
 
 In doing so, you'll be demonstrating a basic understanding of the following:
 
