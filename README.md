@@ -4,7 +4,7 @@ Fork then clone this repository: [https://gitlab.com/kenzie-academy/se/fe/react/
 
 For this assessment, you'll be extending a todo application such that users can actually interact with it.
 
-Here's what the final product should look like:  
+Here's what the final product should look like:
 
 <img src="https://s3.us-east-2.amazonaws.com/files.kenzie.academy/frontend-q2/todo-part-1.gif" alt="example output" height="400px" />
 
@@ -74,7 +74,7 @@ The ES6 style is preferred. Proper binding, using one of the patterns above, is 
 
 The complexity of event handlers can increase when working with lists of components where each component needs its own "parameterized" version of the event handler.
 
-Consider the example below.
+Consider how the `handleDelete` method below works.
 
 ```jsx
 class MyComponent extends Component {
@@ -107,7 +107,40 @@ class MyComponent extends Component {
 }
 ```
 
-Two things to notice: `handleDelete` method is actually a function inside of a function (using two fat arrows). Just the one `handleDelete` method is used for every account, and the first function is called with the `account.id` (you can see the first call in the button onClick). This creates a closure, aka a new memory context, in which `accountId` is saved along with the return value, which is the inner function of `handleDelete`. React will hand off this function closure to the DOM. The DOM then calls the inner function, passing in the `event` object when the user clicks one of the buttons. When the inner function runs, its value for `accountId` will contain the correct id for the button that was clicked.
+Two things to notice: `handleDelete` method is actually a function inside of a function (using two fat arrows). The first function is called with the `account.id` (you can see the first call in the button `onClick`). This creates a closure in which `accountId` is saved along with the return value, which is the inner function of `handleDelete`. React will hand off this function closure to the DOM. The DOM then calls the inner function, passing in the `event` object when the user clicks one of the buttons. When the inner function runs, its value for `accountId` will contain the correct id for the button that was clicked.
+
+The `handleDelete` example below works the same, however, it is written to take two parameters at once instead of one in the first call and one in the second.
+
+```js
+class MyComponent extends Component {
+  state = {
+    accounts: [{ id: 2938 }, { id: 3874 }, { id: 6984 }]
+  };
+
+  handleDelete = (event, accountId) => {
+    const newAccounts = this.state.accounts.filter(
+      account => account.id !== accountId
+    );
+    this.setState({ accounts: newAccounts });
+  };
+
+  render() {
+    return (
+      <React.Fragment>
+        <h1>Active Accounts</h1>
+        {this.state.accounts.map(account => (
+          <div>
+            <p>Account: {account.id}</p>
+            <button onClick={event => this.handleDelete(event, account.id)}>
+              Delete Account
+            </button>
+          </div>
+        ))}
+      </React.Fragment>
+    );
+  }
+}
+```
 
 ## Acceptance Criteria
 
