@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import TodoItem from  './TodoItem'
+import { connect } from "react-redux";
+import {toggleTodo } from "./actions";
 
 class TodoList extends Component {
     render() {
@@ -9,14 +11,20 @@ class TodoList extends Component {
             {this.props.todos.map(todo => (
               <TodoItem  
               key={todo.id}
-              handleToggle={event=>this.props.handleToggle(event,todo.id)}
-              handleDelete={event=> this.props.handleDelete(event,todo.id)} 
+              // handleToggle={event=>this.props.toggleTodo(event,todo.id)}
+              handleDelete={event=> this.props.handleDelete(todo.id)} 
+              handleToggle ={event => this.props.toggleTodo(todo.id)}
+              id = {todo.id}
               title={todo.title} 
               completed={todo.completed} />
-            ))}
-          </ul>
-        </section>
+            ))} 
+          </ul> 
+        </section> 
       );
     };
     }
-    export default TodoList
+
+    const mapDispatchToprops = {
+      toggleTodo
+    }
+    export default connect(null, mapDispatchToprops)(TodoList);
