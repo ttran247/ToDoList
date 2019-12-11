@@ -12,4 +12,4 @@ pages:
   only:
   - master
   variables:
-    PUBLIC_URL: "/assessment---todo-app-part-2"
+    PUBLIC_URL: "/assessment---todo-app-part-3"

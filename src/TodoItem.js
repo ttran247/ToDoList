@@ -6,7 +6,6 @@ import {connect} from 'react-redux'
 
 class TodoItem extends Component {
 
-  
   // this.props.  
   render() {
     return(
