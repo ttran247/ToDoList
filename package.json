@@ -1,6 +1,6 @@
 {
   "name": "todos",
-  "homePage":"https://gitlab.com/ttran247/assessment-todo3.git",
+  "homePage":"https://ttran247.gitlab.io/assessment-todo3",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
