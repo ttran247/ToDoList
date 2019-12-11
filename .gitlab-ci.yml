@@ -11,3 +11,5 @@ pages:
     - public
   only:
   - master
+  variables:
+    PUBLIC_URL: "/assessment---todo-app-part-3"
