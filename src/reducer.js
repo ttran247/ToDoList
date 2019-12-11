@@ -20,23 +20,19 @@ switch (action.type) {
         }); 
         return {...state, todos: newToDoList };
     };
- 
-     case ADD_TODO:  {
+    case ADD_TODO:
         //   const newTodoList = state.todos. slice();
         //  newTodoList.push(action.payload);
-         return  {...state, todos: [...state.todos,action.payload]};
-        };
+         return  {...state, todos: [...state.todos, action.payload]};
               
     
      
     
     
-    case CLEAR_COMPLETED_TODOS: {
+    case CLEAR_COMPLETED_TODOS: 
         return {
         ...state, 
         todos: state.todos.filter(todo => todo.completed === false)};
-            
-        };
     
     
     case DELETED_TODOS:{

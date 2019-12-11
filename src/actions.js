@@ -1,4 +1,3 @@
-import TodoList from "./TodoList";
 
 export const TOGGLE_TODO = 'TOGGLE_TODO';
 export const CLEAR_COMPLETED_TODOS= 'CLEAR_COMPLETED_TODOS';
